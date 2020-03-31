@@ -14,6 +14,7 @@ def function_t0(x):
 N = int(L / h) + 1
 x = np.linspace(0, L, N)
 
+# Cхема Уголок
 def solve1(Ku, t):
     M = int(T / t) + 1
 
@@ -28,7 +29,7 @@ def solve1(Ku, t):
 
     return u
 
-
+# Схема Лакса-Вендрофа
 def solve2(Ku, t):
     M = int(T / t) + 1
 
@@ -71,6 +72,7 @@ def print_solve(method, text):
 
 
     rax = plt.axes([0.12, 0.05, 0.15, 0.15])
+    # Значения числа Куранта \/\/\/\/\/\/\/
     radio = RadioButtons(rax, (0.6, 1, 1.1), active=0)
 
     def colorfunc(label):
